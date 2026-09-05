@@ -1,19 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Happy Onam — IT Department</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Manrope:wght@400;500;600;700;800&display=swap');
-:root{--green:#0f5132;--deep:#083c2a;--gold:#e9b949;--cream:#fff8e7;--ink:#173b2c}
-*{box-sizing:border-box} body{margin:0;min-height:100vh;font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 50% 20%,#fffdf3 0,#fff8e7 45%,#f6edcf 100%);overflow-x:hidden}
-body:before,body:after{content:"";position:fixed;inset:auto;pointer-events:none;border-radius:50%;filter:blur(30px);opacity:.28}body:before{width:260px;height:260px;background:#e9b949;top:-90px;left:-80px}body:after{width:300px;height:300px;background:#54a36f;right:-130px;bottom:-120px}
-.wrap{min-height:100vh;display:grid;place-items:center;padding:32px 18px}.card{width:min(760px,100%);text-align:center;position:relative;padding:58px 28px 44px;border:1px solid rgba(15,81,50,.14);border-radius:34px;background:rgba(255,253,243,.74);box-shadow:0 24px 70px rgba(42,71,47,.13);backdrop-filter:blur(14px)}
-.badge{display:inline-flex;gap:8px;align-items:center;padding:8px 14px;border-radius:999px;background:#0f5132;color:#fff;font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:#e9b949}
-.mandala{width:150px;height:150px;margin:28px auto 24px;position:relative;display:grid;place-items:center}.ring,.ring:before,.ring:after{position:absolute;content:"";border:2px solid rgba(233,185,73,.8);border-radius:50%}.ring{inset:0}.ring:before{inset:13px}.ring:after{inset:28px}.petals{position:absolute;inset:0;animation:spin 24s linear infinite}.petals span{position:absolute;width:34px;height:56px;background:#e9b949;border-radius:70% 70% 10% 70%;left:58px;top:-2px;transform-origin:17px 77px;opacity:.9}.petals span:nth-child(2){transform:rotate(45deg)}.petals span:nth-child(3){transform:rotate(90deg)}.petals span:nth-child(4){transform:rotate(135deg)}.petals span:nth-child(5){transform:rotate(180deg)}.petals span:nth-child(6){transform:rotate(225deg)}.petals span:nth-child(7){transform:rotate(270deg)}.petals span:nth-child(8){transform:rotate(315deg)}.center{z-index:2;width:70px;height:70px;border-radius:50%;background:#fffdf3;border:7px double var(--green);display:grid;place-items:center;font-size:29px;box-shadow:0 7px 20px rgba(15,81,50,.15)}
-.kicker{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#688271;margin:0 0 10px}.title{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(48px,10vw,88px);line-height:.95;margin:0;color:var(--green);font-weight:400}.subtitle{font-size:clamp(20px,4vw,29px);font-weight:800;margin:14px 0 0;color:#b47711}.divider{width:80px;height:2px;background:var(--gold);margin:26px auto;border-radius:99px}.quote{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(21px,4vw,30px);line-height:1.35;margin:0 auto 12px;max-width:610px;color:#355342}.mal{font-size:14px;color:#74877a;margin:0}.footer{margin-top:34px;font-size:12px;color:#7a8a80}.footer strong{color:var(--green)}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media(max-width:520px){.card{padding:40px 20px 32px;border-radius:26px}.mandala{width:125px;height:125px}.petals span{width:28px;height:48px;left:48.5px;transform-origin:14px 65px}.petals span:nth-child(2){transform:rotate(45deg)}.petals span:nth-child(3){transform:rotate(90deg)}.petals span:nth-child(4){transform:rotate(135deg)}.petals span:nth-child(5){transform:rotate(180deg)}.petals span:nth-child(6){transform:rotate(225deg)}.petals span:nth-child(7){transform:rotate(270deg)}.petals span:nth-child(8){transform:rotate(315deg)}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f5132" />
+  <meta name="description" content="Colourful Onam greetings from the Department of Information Technology." />
+  <title>Happy Onam | IT Department</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#0f5132;--deep:#06351f;--cream:#fffaf0;--gold:#efb51e;--red:#b92f2f;--orange:#ee741c;--yellow:#f6ca32;--pink:#d94b6a;--purple:#77418a;--leaf:#5c963f}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;color:var(--deep);font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 12% 8%,rgba(239,181,30,.2),transparent 25%),radial-gradient(circle at 88% 18%,rgba(217,75,106,.15),transparent 24%),linear-gradient(145deg,#fffef7,#fff5d7 52%,#fffdf3);overflow-x:hidden}
+    .floating{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.floating i{position:absolute;width:10px;height:17px;border-radius:70% 30% 70% 30%;opacity:.24;animation:fall 13s linear infinite}.floating i:nth-child(1){left:7%;top:-30px;background:var(--red)}.floating i:nth-child(2){left:22%;top:-120px;background:var(--yellow);animation-delay:-5s}.floating i:nth-child(3){left:67%;top:-70px;background:var(--pink);animation-delay:-9s}.floating i:nth-child(4){left:90%;top:-150px;background:var(--orange);animation-delay:-3s}.floating i:nth-child(5){left:45%;top:-80px;background:var(--purple);animation-delay:-7s}@keyframes fall{to{transform:translateY(115vh) rotate(540deg)}}
+    .wrap{position:relative;z-index:1;min-height:100vh;display:grid;place-items:center;padding:28px 16px}.card{width:min(900px,100%);overflow:hidden;text-align:center;border-radius:34px;background:rgba(255,253,244,.84);border:1px solid rgba(15,81,50,.15);box-shadow:0 28px 80px rgba(31,69,45,.17);backdrop-filter:blur(12px)}
+    .colour-strip{height:15px;background:repeating-linear-gradient(90deg,var(--red) 0 52px,var(--orange) 52px 104px,var(--yellow) 104px 156px,var(--leaf) 156px 208px,var(--purple) 208px 260px,var(--pink) 260px 312px)}.content{padding:48px clamp(20px,7vw,76px) 44px}
+    .badge{display:inline-flex;align-items:center;gap:9px;padding:9px 16px;border-radius:999px;background:rgba(15,81,50,.07);border:1px solid rgba(15,81,50,.15);color:var(--green);font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.badge b{color:var(--gold);font-size:14px}
+    h1{margin:20px 0 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(72px,13vw,135px);line-height:.72;letter-spacing:-.06em;font-weight:700;background:linear-gradient(90deg,var(--green),var(--orange),var(--red),var(--purple),var(--green));background-size:260% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s ease-in-out infinite}@keyframes shine{0%,100%{background-position:0%}50%{background-position:100%}}
+    .from{margin:21px auto 0;max-width:680px;color:#4c6756;font-size:clamp(15px,2.6vw,20px);font-weight:600}.from strong{color:var(--green);font-weight:800}
+    .pookalam{width:min(330px,67vw);aspect-ratio:1;margin:43px auto 42px;position:relative;border-radius:50%;display:grid;place-items:center;background:var(--green);box-shadow:0 0 0 9px #fff3c5,0 0 0 17px var(--red),0 0 0 25px var(--orange),0 0 0 33px var(--yellow),0 18px 50px rgba(15,81,50,.22)}
+    .ring{position:absolute;border-radius:50%;border:8px solid transparent}.r1{inset:9%;border-top-color:var(--red);border-right-color:var(--yellow);border-bottom-color:var(--pink);border-left-color:var(--orange);transform:rotate(18deg)}.r2{inset:17%;border-top-color:var(--yellow);border-right-color:var(--purple);border-bottom-color:var(--orange);border-left-color:var(--red);transform:rotate(-21deg)}.r3{inset:26%;border-top-color:var(--pink);border-right-color:var(--yellow);border-bottom-color:var(--red);border-left-color:var(--leaf);transform:rotate(31deg)}
+    .petal{position:absolute;width:14px;height:14px;border-radius:50%;box-shadow:0 0 0 5px currentColor}.p1{color:var(--yellow);top:11%;left:46%}.p2{color:var(--red);top:20%;right:15%}.p3{color:var(--orange);bottom:16%;right:18%}.p4{color:var(--pink);bottom:11%;left:45%}.p5{color:var(--purple);top:46%;left:10%}
+    .centre{z-index:3;width:45%;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;padding:20px;background:radial-gradient(circle at 35% 30%,#fffef3,#f8df91 48%,#dfa81b);border:7px solid rgba(255,255,255,.7);box-shadow:inset 0 0 0 4px rgba(15,81,50,.55),0 8px 22px rgba(0,0,0,.16);color:var(--deep)}.centre span{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(22px,4vw,34px);font-weight:700;line-height:.82}
+    .quote-wrap{min-height:125px;display:grid;place-items:center}.quote{max-width:700px;margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(26px,4.6vw,42px);line-height:1.08;font-weight:600;color:#2f513e;transition:opacity .35s,transform .35s}.quote.fade{opacity:0;transform:translateY(8px)}.mark{color:var(--orange);font-size:1.35em;vertical-align:-.12em}.source{margin-top:12px;color:#7d897c;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+    .divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:27px 0 18px;color:var(--gold);font-size:18px}.divider:before,.divider:after{content:'';width:80px;height:1px;background:linear-gradient(90deg,transparent,rgba(239,181,30,.7))}.divider:after{transform:scaleX(-1)}.mal{margin:0;color:#92502e;font-family:'Nirmala UI','Noto Serif Malayalam',serif;font-size:15px;font-weight:600}.footer{padding:17px 20px;border-top:1px solid rgba(15,81,50,.09);background:rgba(15,81,50,.045);font-size:10px;letter-spacing:.06em;color:#748078}.footer strong{color:var(--green)}
+    @media(max-width:600px){.wrap{padding:18px 11px}.card{border-radius:25px}.colour-strip{height:10px}.content{padding:40px 18px 34px}h1{font-size:72px}.from{font-size:14px;line-height:1.5}.pookalam{width:61vw;margin:40px auto 42px}.quote-wrap{min-height:155px}.quote{font-size:29px}.divider:before,.divider:after{width:55px}}
+  </style>
 </head>
-<body><main class="wrap"><section class="card"><div class="badge"><span class="dot"></span> Department of Information Technology</div><div class="mandala" aria-hidden="true"><div class="ring"></div><div class="petals"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="center">🌼</div></div><p class="kicker">A little digital greeting from our department</p><h1 class="title">Happy Onam</h1><p class="subtitle">from the Department of Information Technology</p><div class="divider"></div><p class="quote">“May this Onam fill your days with joy, your home with harmony, and your heart with hope.”</p><p class="mal">Onam Ashamsakal.</p><p class="footer">With warm wishes &nbsp;•&nbsp; <strong>IT Department</strong></p></section></main></body></html>
+<body>
+  <div class="floating" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <main class="wrap">
+    <section class="card">
+      <div class="colour-strip"></div>
+      <div class="content">
+        <div class="badge"><b>✦</b> Department of Information Technology <b>✦</b></div>
+        <h1>Happy Onam</h1>
+        <p class="from">Warm wishes from the <strong>Department of Information Technology</strong></p>
+
+        <div class="pookalam" aria-label="Colourful pookalam inspired artwork">
+          <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+          <span class="petal p1"></span><span class="petal p2"></span><span class="petal p3"></span><span class="petal p4"></span><span class="petal p5"></span>
+          <div class="centre"><span>പൂക്കളം<br>സ്നേഹം<br>IT ✦</span></div>
+        </div>
+
+        <div class="quote-wrap">
+          <div>
+            <p id="quote" class="quote"><span class="mark">“</span> May every new beginning bring you closer to your dreams. <span class="mark">”</span></p>
+            <div id="source" class="source">A thought to carry forward</div>
+          </div>
+        </div>
+        <div class="divider">✿</div>
+        <p class="mal">സ്നേഹവും സന്തോഷവും സമൃദ്ധിയും നിറഞ്ഞ ഓർമ്മകൾ എന്നും കൂടെയുണ്ടാകട്ടെ.</p>
+      </div>
+      <div class="footer">A colourful little greeting from <strong>IT Department</strong> · Keep creating. Keep growing.</div>
+    </section>
+  </main>
+  <script>
+    const quotes=[
+      ['May every new beginning bring you closer to your dreams.','A thought to carry forward'],
+      ['Great things begin when ordinary people dare to think differently.','Keep creating'],
+      ['Believe in your ideas, trust your journey, and keep moving forward.','Keep growing'],
+      ['Success is built one small step, one brave idea, and one lesson at a time.','Keep going'],
+      ['Let kindness be your strength and curiosity be your compass.','A simple reminder'],
+      ['Celebrate the people, moments, and memories that make the journey meaningful.','With warm wishes'],
+      ['ഒരുമയുടെയും സന്തോഷത്തിന്റെയും നിറങ്ങൾ എന്നും മനസ്സിൽ നിറയട്ടെ.','Onam wishes']
+    ];
+    const q=document.getElementById('quote'),s=document.getElementById('source');let n=0;
+    setInterval(()=>{q.classList.add('fade');setTimeout(()=>{n=(n+1)%quotes.length;q.innerHTML=`<span class="mark">“</span> ${quotes[n][0]} <span class="mark">”</span>`;s.textContent=quotes[n][1];q.classList.remove('fade')},350)},5000);
+  </script>
+</body>
+</html>
